@@ -44,3 +44,20 @@ done
 
 echo ${outcomes[@]}
 
+#sorting in ascending order
+
+for (( i = 0; i <= 4 ; i++ ))
+do
+	for (( j = $i; j <= 4; j++ ))
+	do
+		if [ ${outcomes[$i]} -gt ${outcomes[$j]}  ]
+		then
+       			t=${outcomes[$i]}
+       			outcomes[$i]=${outcomes[$j]}
+       			outcomes[$j]=$t
+      		fi
+   	done
+done
+
+
+echo ${outcomes[@]}
