@@ -15,3 +15,13 @@ comptn[2]=$result2
 comptn[3]=$result3
 comptn[4]=$result4
 
+#storing dictionary values in array
+for (( i=1; i<=4; i++ ))
+do
+
+	outcomes[((count++))]=${comptn[$i]}
+
+done
+
+echo ${outcomes[@]}
+
