@@ -25,3 +25,22 @@ done
 
 echo ${outcomes[@]}
 
+#sorting in decending order
+
+
+for (( i = 0; i < $n ; i++ ))
+do
+	for (( j = $i; j < $n; j++ ))
+	do
+		if [ ${nos[$i]} -lt ${nos[$j]}  ]
+		then
+			t=${nos[$i]}
+			nos[$i]=${nos[$j]}
+			nos[$j]=$t
+		fi
+	done
+done
+
+
+echo ${outcomes[@]}
+
